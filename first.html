@@ -3,9 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main{
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 100px 600px 80px;
+            gap: 10px;
+            text-align: center;
+        }
+        #logo{
+            background-color: green;
+        }
+        #footer{
+            
+        }
+        section{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+        }
+        #left{
+            background-color: aquamarine;
+        }
+        #right{
+            display: grid;
+            grid-template-rows: 1fr 3fr;
+            gap: 10px;
+        }
+        header,article{
+            background-color: aquamarine;
+        }
+
+    
+    </style>
+
 </head>
+
 <body>
-    <h1>Hello</h1>
+
+    <main>
+
+
+        <div id="logo">
+            <h2>Logo</h2>
+        </div>
+
+
+        <section>
+            <div id="left">
+                <h2>Side Bar Navigation</h2>
+            </div>
+            <div id="right">
+
+                <header>
+                    <h2>Header/Banner</h2>
+                </header>
+
+                <article>
+                    <h2>
+                        Article
+                    </h2>
+                </article>
+            </div>
+        </section>
+
+
+        <footer>
+            <h2>Footer</h2>
+        </footer>
+
+
+    </main>
+
 </body>
+
 </html>
