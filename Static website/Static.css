@@ -1,0 +1,70 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.navbar{
+    width: 100%;
+    overflow: auto;
+}
+
+.navbar a{
+    padding: 5px;
+    padding-left: 19px;
+}
+
+h1{
+    font-family: oswald;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 40px;
+}
+h2{
+text-align: center;
+font-family: oswald;
+font-size: 14px;
+}
+#head {
+    padding-bottom: 30px;
+}
+
+.container  {
+    position: relative;
+
+}
+.container img{
+    width: 860px;
+    height: 500px;
+    display: block;
+}
+
+.one{
+    position: absolute;
+    color: white;
+    font-family: oswald;
+    top: 170px;
+    left: 500px;
+    font-size: xx-large;
+}
+
+.two{
+    position: absolute;
+    color: white;
+    font-family: oswald;
+    top: 210px;
+    left: 500px;
+    font-size: 40px ;
+}
+
+.but1{
+    position: absolute;
+    top: 280px;
+    left: 500px;
+    
+}
+.but1 button{
+    font-family: oswald;
+    cursor: pointer;
+    border: none;
+    font-size: small;
+}
