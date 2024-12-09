@@ -61,10 +61,21 @@ font-size: 14px;
     top: 280px;
     left: 500px;
     
+    
 }
 .but1 button{
     font-family: oswald;
     cursor: pointer;
-    border: none;
+    border-color: black;
     font-size: small;
+    width: 80px;
+    height: 25px;
+    border-radius: 11px;
+    background-color: white;
+    border-color: rgb(0, 0, 0);
+    color: black;
+    opacity: 70%;
+    border-width: 1px;
+    border-style: solid;
+
 }
