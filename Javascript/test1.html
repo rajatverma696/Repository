@@ -1,0 +1,100 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    function sayHello(){ alert("Hello world")}
+    </script>
+</head>
+<body>
+    <input type="button" onclick="sayHello()" value="Say hello" />
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<body>
+<!-- <p id="demo"></p>
+
+<script>
+x = 5;
+y = 6;
+z = x + y;
+document.getElementById("demo").innerHTML =
+"The value of z is: " + z;
+</script> -->
+<!-- 
+<script>
+    let name = "abhay";
+    console.log(typeof(name));
+
+    let mob = 2345678;
+    console.log(typeof(mob));
+
+    let ismarried = false;
+    console.log(typeof(ismarried));
+
+// object - collection of its name and its value
+  let my_info = {
+   name:"Nikhil", age: 30, mob: 8287876678, add: "Delhi", ismarried: false, pincode:null
+  }
+
+  console.log(my_info.name);
+  console.log(my_info.mob + " is my phone number and address is " + my_info.add);
+</script> -->
+
+<!-- <script>
+    // function: block of th code, which generates the output once calls on invokes
+    let msg = function(){
+        console.log("thanks to visit us");
+        console.log(typeof(msg));
+    }
+    msg();
+    
+</script> -->
+<!-- 
+<script>
+    // array: array is a collection of anything is: any data type
+
+    let student = [ 
+        "Rohan",
+        30,
+        8374764938,
+        "r233@gmail.com",
+        false,
+        "Delhi",
+        110094
+    ];
+    console.log(student[2]);
+</script> -->
+
+<script>
+    // creating object having all data types value
+
+    let student ={
+        name :["makhan", "pandey","uday","tarzan"],
+        age: 30,
+        course: "web",
+        add:{
+            area: "Nehru Place",
+            city:"Delhi",
+            pincode: 110094
+        },
+        getinfo:function(){
+            return this.name[1]+ this.age
+        },
+        isMarried: false
+    };
+    console.log(student.getinfo()); //object with function
+    console.log(student.name[2]);  //object with array
+    console.log(student.add.city); //object with object
+
+
+</script>
+
+</body>
+</html>
+
+
