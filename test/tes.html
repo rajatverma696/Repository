@@ -1,36 +1,19 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .container{
-            height: auto;
-            position: relative;
-            width: 800px;
-            background-color: red;
-        }
-        .container img{
-            width: 100%;
-            display: block;
-
-        }
-        .one{
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            color: aliceblue;
-        }
-    </style>
-</head>
+   <meta charset="UTF-8">
+   <title> Google Translater for Website </title> 
+</head> 
 <body>
-    <div class="container" > 
-        <img src="alan-walker-logo-4k-qhd-1920x1080.jpg" alt="">
-        <div class="one">
-            top left
-        </div>
-       
-    </div>
+
+<div id="google_translate_element"></div>
+
+ <script type="text/javascript">
+  function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
-</html>
+</html>  

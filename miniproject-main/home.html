@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASYGOV</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR start -->
+    <header> 
+        <nav class="navbar">
+          <div class="image-container">
+            <img id="logo" src="images/satyamev_jayete.png" alt="LOGO image">
+            <h1>EasyGov</h1></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#guides">Guides</a></li>
+                <li><a href="#foot">Contact</a></li>
+                 <div id="google_translate_element"></div>
+                     <script type="text/javascript">
+                      function googleTranslateElementInit() {
+                      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                      }
+                     </script>
+                    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></li>
+                    <!-- TOGGLE BUTTON -->
+                 
+                    <!-- TOGGLE BUTTON HTML -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch" />
+        <label for="theme-switch" class="toggle-label">
+          <span class="icon-light">☀️</span>
+          <span class="icon-dark">🌙</span>
+        </label>
+      </div>
+      <!-- TOGGLE BUTTON JS -->
+    <script>
+const themeSwitch = document.getElementById('theme-switch');
+
+// Check for saved theme in localStorage
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme) {
+  document.body.className = currentTheme; // Apply saved theme
+  themeSwitch.checked = currentTheme === 'dark-mode'; // Sync toggle state
+}
+
+// Listen for toggle changes
+themeSwitch.addEventListener('change', () => {
+  if (themeSwitch.checked) {
+    document.body.className = 'dark-mode';
+    const cards = document.querySelectorAll(".card")
+    const featureCards = document.querySelectorAll(".feature-card")
+    featureCards.forEach(card => card.style.background = "black") 
+    cards.forEach(card => card.classList.add("dark-mode"))
+    document.querySelector(".features").style.background = "black"
+    localStorage.setItem('theme', 'dark-mode'); // Save preference
+  } else {
+    document.body.className = 'light-mode';
+    const cards = document.querySelectorAll(".card")
+    cards.forEach(card => card.classList.remove("dark-mode"))
+    const featureCards = document.querySelectorAll(".feature-card")
+    featureCards.forEach(card => card.style.background = "white") 
+    document.querySelector(".features").style.background = "white"
+
+    localStorage.setItem('theme', 'light-mode'); // Save preference
+  }
+});
+
+   </script>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- navbar END -->
+    <!-- carousel start -->
+    <div id="carouselExampleIndicators" class="carousel slide"  data-bs-interval="3000">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img class="d-block w-100 c-img" src="images/aadharcarousel.png" alt="First slide">
+          <div class="carousel-caption top-0 mt-4 d-none d-md-block">
+            <p  id = "typewriter"  class="h5 top-0" >STREAMLINE YOUR GOVERNMENT DOCUMENT APPLICATION</p>
+            <p>Let's EasyGOV </p>
+            <button class="btn btn-primary"> GUIDES</button>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img class="d-block w-100 c-img" src="images/dlcarouselu.png" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>...</h5>
+            <p>...</p>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img class="d-block w-100 c-img" src="images/votecarousel.png" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>...</h5>
+            <p>...</p>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img class="d-block w-100 c-img" src="images/passportcarousel.png" alt="fourth slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>...</h5>
+            <p>...</p>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img class="d-block w-100 c-img" src="images/dlcarousel.png" alt="fifth slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>...</h5>
+            <p>...</p>
+          </div>
+        </div>
+      </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+      <!-- OUR KEY Features Section -->
+<section id="features" class="features">
+  <h3>Our Key Features</h3>
+  <div class="feature-cards">
+    <div class="feature-card">
+      <div class="icon">🌐</div>
+      <h4>Multi-Language Support</h4>
+      <p>Accessible for everyone, with support for multiple languages to guide you through each step.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">✅</div>
+      <h4>Error-Free Guidance</h4>
+      <p>Get clear instructions to avoid mistakes in your document applications.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📦</div>
+      <h4>Track Application Status</h4>
+      <p>Coming soon: track your document application status directly through our platform. Stay tuned for updates.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🔒</div>
+      <h4>Secure Information Handling</h4>
+      <p>Your data is safe with us, as we prioritize security and privacy in all your interactions.</p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Document Application Guides -->
+<section id="guides" class="guides">
+  <h3>Document Application Guides</h3>
+  <div class="guide-cards">
+    <!-- Aadhaar -->
+    <div class="card">
+      <img src="https://www.livelaw.in/h-upload/2024/07/06/750x450_548125-aadhaar.webp" alt="Aadhaar Card">
+      <div class="card-body">
+        <h5 class="card-title">Aadhaar Card</h5>
+        <p class="card-text">Learn how to apply, update, or track your Aadhaar Card effortlessly.</p>
+        <a href="aadhar.html" class="btn">View Guide</a>
+      </div>
+    </div>
+    <!-- PAN Card -->
+    <div class="card">
+      <img src="images/image_16962222672097.webp" alt="PAN Card">
+      <div class="card-body">
+        <h5 class="card-title">PAN Card</h5>
+        <p class="card-text">Quick steps for applying or updating your PAN Card information.</p>
+        <a href="pan.html" class="btn">View Guide</a>
+      </div>
+    </div>
+    <!-- Driving License -->
+    <div class="card">
+      <img src="images/driving_license_renewal_in_delhi_b703d408f7.png" alt="Driving License">
+      <div class="card-body">
+        <h5 class="card-title">Driving License</h5>
+        <p class="card-text">Get all the details on applying or renewing your driving license.</p>
+        <a href="DL.html" class="btn">View Guide</a>
+      </div>
+    </div>
+    <!-- Passport -->
+    <div class="card">
+      <img src="images/istockphoto-587806604-612x612.jpg" alt="Passport">
+      <div class="card-body">
+        <h5 class="card-title">Passport</h5>
+        <p class="card-text">Step-by-step guide to applying for your passport.</p>
+        <a href="passport.html" class="btn">View Guide</a>
+      </div>
+    </div>
+    <!-- Voter ID -->
+    <div class="card">
+      <img src="images/Apply-voter-id-online.jpg" alt="Voter ID">
+      <div class="card-body">
+        <h5 class="card-title">Voter ID Card</h5>
+        <p class="card-text">Complete guidance on obtaining or updating your Voter ID Card.</p>
+        <a href="voter.html" class="btn">View Guide</a>
+      </div>
+    </div>
+    <!-- Marriage Certificate -->
+    <div class="card">
+      <img src="images/Apply-Marriage-Certificate.png" alt="Marriage Certificate">
+      <div class="card-body">
+        <h5 class="card-title">Marriage Certificate</h5>
+        <p class="card-text">Know the process of registering and obtaining your Marriage Certificate.</p>
+        <a href="marriage.html" class="btn">View Guide</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Document Updation Guides -->
+ <section id="guides" class="guides">
+  <h3>Document Updation Guides</h3>
+  <div class="guide-cards">
+    <!-- Aadhaar -->
+    <div class="card">
+      <img src="https://www.livelaw.in/h-upload/2024/07/06/750x450_548125-aadhaar.webp" alt="Aadhaar Card">
+      <div class="card-body">
+        <h5 class="card-title">Aadhaar Card</h5>
+        <p class="card-text">Learn how to apply, update, or track your Aadhaar Card effortlessly.</p>
+        <a href="aadharup.html" class="btn">View Guide</a>
+      </div>
+    </div>
+    <!-- PAN Card -->
+    <div class="card">
+      <img src="images/image_16962222672097.webp" alt="PAN Card">
+      <div class="card-body">
+        <h5 class="card-title">PAN Card</h5>
+        <p class="card-text">Quick steps for applying or updating your PAN Card information.</p>
+        <a href="panup.html" class="btn">View Guide</a>
+      </div>
+    </div>
+    <!-- Driving License -->
+    <div class="card">
+      <img src="images/driving_license_renewal_in_delhi_b703d408f7.png" alt="Driving License">
+      <div class="card-body">
+        <h5 class="card-title">Driving License</h5>
+        <p class="card-text">Get all the details on applying or renewing your driving license.</p>
+        <a href="DLup.html" class="btn">View Guide</a>
+      </div>
+    </div>
+    <!-- Passport -->
+    <div class="card">
+      <img src="images/istockphoto-587806604-612x612.jpg" alt="Passport">
+      <div class="card-body">
+        <h5 class="card-title">Passport</h5>
+        <p class="card-text">Step-by-step guide to applying for your passport.</p>
+        <a href="passportup.html" class="btn">View Guide</a>
+      </div>
+    </div>
+    <!-- Voter ID -->
+    <div class="card">
+      <img src="images/Apply-voter-id-online.jpg" alt="Voter ID">
+      <div class="card-body">
+        <h5 class="card-title">Voter ID Card</h5>
+        <p class="card-text">Complete guidance on obtaining or updating your Voter ID Card.</p>
+        <a href="voterup.html" class="btn">View Guide</a>
+      </div>
+    </div>
+    <!-- Marriage Certificate -->
+    <div class="card">
+      <img src="images/Apply-Marriage-Certificate.png" alt="Marriage Certificate">
+      <div class="card-body">
+        <h5 class="card-title">Marriage Certificate</h5>
+        <p class="card-text">Know the process of registering and obtaining your Marriage Certificate.</p>
+        <a href="marriageup.html" class="btn">View Guide</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="#">watch</a></li>
+                    <li><a href="#">bag</a></li>
+                    <li><a href="#">shoes</a></li>
+                    <li><a href="#">dress</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- bootstrap script -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

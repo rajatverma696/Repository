@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1b2f;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #ffffff;
+}
+
+a {
+    color: #ff4b5c;
+    text-decoration: none;
+}
+
+section.contact {
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-section,
+.contact-info {
+    width: 45%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    background-color: #2a2b48;
+    border: none;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #bbbbbb;
+}
+
+button {
+    background-color: #ff4b5c;
+    border: none;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e43a4b;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.map-section {
+    margin-top: 50px;
+}
+
+.map-embed {
+    width: 100%;
+    height: 300px;
+    background-color: #2a2b48; 
+}
+
+footer {
+    background-color: #151628;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 10px 0;
+}
+
