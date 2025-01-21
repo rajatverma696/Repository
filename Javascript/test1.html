@@ -92,7 +92,17 @@ document.getElementById("demo").innerHTML =
         // console.log(student.name[2]);  //object with array
         // console.log(student.add.city); //object with object
        
-        const heading = document.createElement("hi")
+         // Create an image element
+        const imgElement = document.createElement('img');
+
+        // Set the 'src' attribute
+        imgElement.setAttribute('src', 'path/to/your/image.jpg');
+
+        // Optionally, add other attributes (e.g., alt text)
+        imgElement.setAttribute('alt', 'Description of the image');
+
+        // Append the image to a parent element in the DOM
+        document.body.appendChild(imgElement);
         
 
     </script>
